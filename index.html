@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluccel - Servicios de Informática y Telecomunicaciones</title>
+    <meta name="description"
+        content="Soluccel ofrece servicios profesionales de informática y telecomunicaciones: instalación de redes, cámaras de seguridad, antenas satelitales y más.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <img src="images/soluccel_logo.png"
+                    alt="Soluccel Logo" class="logo-img">
+            </a>
+            <div class="lang-switch">
+                <button id="btn-es" class="lang-btn active" title="Español">🇪🇸</button>
+                <button id="btn-en" class="lang-btn" title="English">🇬🇧</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1 data-i18n="hero_title">Soluciones Tecnológicas Integrales</h1>
+            <p data-i18n="hero_subtitle">Expertos en Informática y Telecomunicaciones a tu servicio.</p>
+            <a href="https://wa.me/663086777" class="btn btn-primary" data-i18n="hero_cta">Contáctanos ahora</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="services-wrapper">
+
+                <!-- Informática -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/computing_services.png"
+                            alt="Servicios de Informática">
+                    </div>
+                    <div class="service-content">
+                        <h2 data-i18n="it_title">Informática</h2>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="it_1">Mantenimiento y
+                                    reacondicionamiento</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="it_2">Instalación y configuración de
+                                    redes</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="it_3">Instalación y configuración de
+                                    cámaras de seguridad</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="it_4">Soporte de software técnico y
+                                    presencial</span></li>
+                            <li><i class="fa-solid fa-plus"></i> <span data-i18n="it_5">Mucho más...</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Telecomunicaciones -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/telecom_antennas.png"
+                            alt="Servicios de Telecomunicaciones">
+                    </div>
+                    <div class="service-content">
+                        <h2 data-i18n="tel_title">Telecomunicaciones</h2>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="tel_1">Instalación de antenas
+                                    satelitales y para empresas</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="tel_2">Venta y activación de líneas
+                                    móviles</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="tel_3">Internet de fibra
+                                    óptica</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="tel_4">Instalación de antenas
+                                    4G</span></li>
+                            <li><i class="fa-solid fa-plus"></i> <span data-i18n="tel_5">Mucho más...</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="register-section" id="registro">
+        <div class="container">
+            <div class="register-wrapper">
+
+                <!-- Left Panel - Info -->
+                <div class="register-info">
+                    <div class="register-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <h2 data-i18n="reg_title">Recibe nuestras novedades</h2>
+                    <p data-i18n="reg_subtitle">Regístrate y te enviaremos directamente a tu correo las últimas ofertas,
+                        noticias y actualizaciones de Soluccel.</p>
+                    <ul class="register-benefits">
+                        <li><i class="fa-solid fa-envelope-circle-check"></i> <span data-i18n="reg_b1">Confirmación
+                                inmediata por email</span></li>
+                        <li><i class="fa-solid fa-tags"></i> <span data-i18n="reg_b2">Ofertas y promociones
+                                exclusivas</span></li>
+                        <li><i class="fa-solid fa-newspaper"></i> <span data-i18n="reg_b3">Noticias del sector
+                                tecnológico</span></li>
+                        <li><i class="fa-solid fa-headset"></i> <span data-i18n="reg_b4">Soporte prioritario para
+                                clientes</span></li>
+                    </ul>
+                </div>
+
+                <!-- Right Panel - Form -->
+                <div class="register-form-panel">
+                    <form id="register-form" novalidate>
+                        <div class="form-group">
+                            <label for="reg-name" data-i18n="reg_label_name">Nombre completo</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="reg-name" name="user_name" placeholder="Ej: María García"
+                                    required autocomplete="name">
+                            </div>
+                            <span class="field-error" id="err-name" data-i18n="err_name">Por favor, introduce tu
+                                nombre.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg-email" data-i18n="reg_label_email">Correo electrónico</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" id="reg-email" name="user_email" placeholder="ejemplo@correo.com"
+                                    required autocomplete="email">
+                            </div>
+                            <span class="field-error" id="err-email" data-i18n="err_email">Introduce un correo
+                                válido.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg-phone" data-i18n="reg_label_phone">Teléfono <span class="optional"
+                                    data-i18n="optional">(opcional)</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="tel" id="reg-phone" name="user_phone" placeholder="+34 600 000 000"
+                                    autocomplete="tel">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg-interest" data-i18n="reg_label_interest">Área de interés</label>
+                            <div class="input-wrapper select-wrapper">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <select id="reg-interest" name="user_interest">
+                                    <option value="Ambos" data-i18n="opt_both">Informática y Telecomunicaciones</option>
+                                    <option value="Informática" data-i18n="opt_it">Solo Informática</option>
+                                    <option value="Telecomunicaciones" data-i18n="opt_tel">Solo Telecomunicaciones
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" id="reg-consent" name="consent" required>
+                            <label for="reg-consent">
+                                <span data-i18n="reg_consent">Acepto recibir comunicaciones comerciales de Soluccel y la
+                                </span>
+                                <a href="#" data-i18n="reg_privacy">Política de Privacidad</a>.
+                            </label>
+                            <span class="field-error" id="err-consent" data-i18n="err_consent">Debes aceptar para
+                                continuar.</span>
+                        </div>
+
+                        <button type="submit" class="btn-register" id="btn-register">
+                            <span class="btn-text" data-i18n="reg_btn">Registrarme y recibir novedades</span>
+                            <span class="btn-loading" style="display:none;">
+                                <i class="fa-solid fa-spinner fa-spin"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Toast Notification -->
+    <div class="toast" id="toast-success" role="alert" aria-live="polite">
+        <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="toast-content">
+            <strong data-i18n="toast_title">¡Registro exitoso!</strong>
+            <p data-i18n="toast_msg">Te hemos enviado un correo de confirmación. Revisa tu bandeja de entrada.</p>
+        </div>
+        <button class="toast-close" id="toast-close" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-i18n="cta_phrase">"Vente con Soluccel, escríbenos"</h2>
+            <a href="https://wa.me/663086777" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp Directo
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="images/soluccel_logo.png"
+                    alt="Soluccel Logo" class="footer-logo-img">
+            </div>
+            <div class="social-links">
+                <a href="https://instagram.com/soluccel2024" target="_blank" rel="noopener noreferrer"
+                    class="social-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@soluccel2024</span>
+                </a>
+                <a href="https://facebook.com/Soluccel" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span>Soluccel</span>
+                </a>
+                <a href="https://wa.me/663086777" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>663086777</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Soluccel. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
